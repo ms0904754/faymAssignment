@@ -22,14 +22,11 @@ Each collection can be expanded or collapsed to reveal product images, similar t
 
 # Folder Structure
 
-  lib/
-│── main.dart
-│
+lib/
+├── main.dart
 ├── models/
 │ └── collection_model.dart
-│
 ├── screens/
 │ └── collections_screen.dart
-│
 └── widgets/
 └── collection_card.dart
