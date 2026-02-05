@@ -1,16 +1,35 @@
 # faym_assignment
 
-A new Flutter project.
+This project is a Flutter application that displays a list of product collections using an **accordion-style UI**.  
+Each collection can be expanded or collapsed to reveal product images, similar to the provided design.
 
-## Getting Started
+# Approach
 
-This project is a starting point for a Flutter application.
+- Used **StatefulWidget** to manage UI state.
+- Implemented an **index-based accordion mechanism**:
+  - Maintains a single `expandedIndex`
+  - When a collection is tapped:
+    - If it is already expanded → collapse it
+    - Otherwise → collapse previous and expand the new one
+- Used:
+  - 'AnimatedContainer' for smooth expand/collapse animation
+  - 'ListView.builder' for scalable and scrollable lists
+- Images are loaded using **network placeholders**.
+- UI follows clean design principles:
+  - Rounded corners
+  - Elevation (shadow)
+  - Minimal and readable layout
 
-A few resources to get you started if this is your first Flutter project:
+# Folder Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  lib/
+│── main.dart
+│
+├── models/
+│ └── collection_model.dart
+│
+├── screens/
+│ └── collections_screen.dart
+│
+└── widgets/
+└── collection_card.dart
